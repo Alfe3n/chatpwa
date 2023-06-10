@@ -64,9 +64,10 @@ function Chatpage() {
   };
   // ts-ignore
   return (
-    <div className="w-5/6 page-container">
+    <div className="w-full page-container">
       {data ? (
         <>
+          // ts-ignore
           <Header data={data} />
           <div className="flex flex-col w-full message-container">
             {data.chats.map((item) =>
@@ -121,7 +122,7 @@ function Chatpage() {
           />
         </>
       )}
-      <div className="sticky bottom-0 flex items-center w-full mb-10 ">
+      <div className="sticky bottom-0 flex items-center w-full p-2 text-lg">
         <input
           placeholder="Enter your message"
           type="text"
