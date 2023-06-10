@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = (props) => {
   const [flag, setFlag] = useState(true);
 
   return (
-    <div className="sticky top-0 z-10 w-full mt-4">
+    <div className="sticky top-0 z-10 w-full">
       <div className="flex items-center justify-between text-2xl font-extrabold first-row">
         <div className="flex items-center gap-x-2">
           <IoArrowBackSharp />
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         <FiEdit onClick={() => setFlag(!flag)} />
       </div>
       <div className="flex items-center justify-between my-2 second-row">
-        <div className="h-8 rounded-full bg-blue">p</div>
+        <div className="h-8 rounded-full bg-blue"></div>
         <div className="flex flex-col text-grey ">
           <p>
             From
