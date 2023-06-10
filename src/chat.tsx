@@ -62,12 +62,10 @@ function Chatpage() {
     setNewData([...newData, newMessage]);
     console.log(newData);
   };
-  // ts-ignore
   return (
     <div className="w-full page-container">
       {data ? (
         <>
-          // ts-ignore
           <Header data={data} />
           <div className="flex flex-col w-full message-container">
             {data.chats.map((item) =>
