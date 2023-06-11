@@ -1,42 +1,25 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* popup */
+.css-sjj62m {
+  background-color: black !important;
+  border-style: none !important;
+  border-radius: 50px !important;
+}
+/* expanded menu */
+.css-1kfu8nn {
+  height: fit-content !important;
+  width: fit-content !important;
+}
+.chakra-popover__arrow {
+  background-color: #008000 !important;
+}
+.css-ez23ye {
+  background-color: white !important;
+}
+.css-ez23ye {
+  background-color: #faf9f4 !important;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* menu */
+.css-18esm8n {
+  background-color: white !important;
 }

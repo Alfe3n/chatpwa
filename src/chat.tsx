@@ -43,7 +43,7 @@ function Chatpage() {
         console.log(res.data);
         setData(res.data);
         console.log(data?.chats);
-        scrollToBottom(); // Scroll to the last message
+        scrollToBottom();
       })
       .catch((error) => {
         console.log(error);
@@ -51,8 +51,8 @@ function Chatpage() {
   }, []);
 
   useEffect(() => {
-    scrollToBottom(); // Scroll to the last message whenever `data` changes
-  }, [data]);
+    scrollToBottom();
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -128,7 +128,7 @@ function Chatpage() {
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
         />
-        <div className="flex items-center bg-transparent">
+        <div className="flex items-center ">
           <Popover placement="top">
             <PopoverTrigger>
               <Button>

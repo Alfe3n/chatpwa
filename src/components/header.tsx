@@ -46,14 +46,17 @@ const Header: React.FC<HeaderProps> = (props) => {
         <div className="h-8 rounded-full bg-blue"></div>
         <div className="flex flex-col text-grey ">
           <p>
-            From
-            <span className="font-extrabold text-black ">
+            From{" "}
+            <span className="ml-2 font-extrabold text-black">
               {props.data.from}
             </span>
           </p>
           <p>
             To{" "}
-            <span className="font-extrabold text-black "> {props.data.to}</span>
+            <span className="ml-2 font-extrabold text-black ">
+              {" "}
+              {props.data.to}
+            </span>
           </p>
         </div>
         <Menu placement="bottom">
@@ -68,16 +71,16 @@ const Header: React.FC<HeaderProps> = (props) => {
               </div>
             </MenuItem>
             <MenuItem>
-              <div className="flex items-center">
+              <div className="flex items-center bg-white">
                 <BsTelephone className="bg-white" />
                 <p className="ml-2 bg-white">Share Number</p>
               </div>
             </MenuItem>
 
             <MenuItem>
-              <div className="flex items-center">
+              <div className="flex items-center bg-white">
                 <GoReport />
-                <p className="ml-2">Report</p>
+                <p className="ml-2 bg-white">Report</p>
               </div>
             </MenuItem>
           </MenuList>
