@@ -43,44 +43,60 @@ function Chatpage() {
         console.log(res.data);
         setData(res.data);
         console.log(data?.chats);
-        scrollToBottom();
+        // scrollToBottom();
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
-  useEffect(() => {
-    scrollToBottom();
-  }, []);
+  // useEffect(() => {
+  //   scrollToBottom();
+  // }, []);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  // const scrollToBottom = () => {
+  //   messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  // };
 
   const sendNewMessage = () => {
     setNewData([...newData, newMessage]);
+    setNewMessage("");
     console.log(newData);
   };
+  // const seeOlderChat = () => {
+  //   axios
+  //     .get<ChatData>("https://qa.corider.in/assignment/chat?page=1")
+  //     .then((res) => {
+  //       console.log(res.data);
+  //       setData(res.data, data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+
   return (
     <div className="w-full page-container">
       {data ? (
         <>
           <Header data={data} />
+          {/* <p onClick={seeOlderChat}> see older chats</p> */}
           <div className="flex flex-col w-full message-container">
             {data.chats.map((item) =>
               item.sender.self ? (
                 <div key={item.id}>
-                  <div className="flex self-end w-full p-2 mb-4 chat-container drop-shadow-lg bg-blue gap-x-2 rounded-b-xl rounded-tl-xl">
+                  <div className="flex self-end p-2 mb-4 w-fit chat-container drop-shadow-lg bg-blue gap-x-2 rounded-b-xl rounded-tl-xl">
                     <p
                       className="text-lg text-white bg-blue"
-                      dangerouslySetInnerHTML={{ __html: item.message }}
-                    ></p>
+                      // dangerouslySetInnerHTML={{ __html: item.message }}
+                    >
+                      {item.message}
+                    </p>
                   </div>
                 </div>
               ) : (
                 <div
-                  className="flex w-full mb-4 chat-container gap-x-2 "
+                  className="flex mb-4 w-fit chat-container gap-x-2 "
                   key={item.id}
                 >
                   <img
@@ -91,8 +107,10 @@ function Chatpage() {
                   <div className="p-2 bg-white rounded-b-xl rounded-tr-xl drop-shadow-lg">
                     <p
                       className="text-lg bg-white text-grey rounded-xl"
-                      dangerouslySetInnerHTML={{ __html: item.message }}
-                    ></p>
+                      // dangerouslySetInnerHTML={{ __html: item.message }}
+                    >
+                      {item.message}
+                    </p>
                   </div>
                 </div>
               )
@@ -100,7 +118,7 @@ function Chatpage() {
             {newData.map((item) => (
               <div
                 key={item}
-                className="flex self-end w-full p-2 mb-4 chat-container drop-shadow-lg bg-blue gap-x-2 rounded-b-xl rounded-tl-xl"
+                className="flex self-end p-2 mb-4 w-fit chat-container drop-shadow-lg bg-blue gap-x-2 rounded-b-xl rounded-tl-xl"
               >
                 <p className="text-lg text-white bg-blue">{item}</p>
               </div>
