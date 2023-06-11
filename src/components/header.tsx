@@ -86,7 +86,7 @@ const Header: React.FC<HeaderProps> = (props) => {
           </MenuList>
         </Menu>
       </div>
-      <hr className="my-6"></hr>
+      <hr className="w-full my-6"></hr>
     </div>
   );
 };
