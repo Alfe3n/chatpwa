@@ -4,8 +4,7 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 const manifestForPlugin = {
-  registerType: "prompt",
-  includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
+  registerType: ["android-chrome-512x512.png", "android-chrome-192x192.png"],
   manifest: {
     name: "Chat App",
     short_name: "Chat App",
@@ -22,13 +21,13 @@ const manifestForPlugin = {
         type: "image/png",
       },
       {
-        src: "/apple-touch-icon.png",
+        src: "/android-chrome-192x192.png",
         sizes: "180x180",
         type: "image/png",
         purpose: "apple touch icon",
       },
       {
-        src: "/maskable_icon.png",
+        src: "/android-chrome-192x192.png",
         sizes: "225x225",
         type: "image/png",
         purpose: "any maskable",
